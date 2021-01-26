@@ -79,7 +79,6 @@ RUN chmod 4755 /bin/gosu && \
     chmod 0755 /start_*.sh
 
 EXPOSE 3000/tcp
-EXPOSE 9993/udp
 EXPOSE 3180/tcp
 EXPOSE 8000/tcp
 EXPOSE 3443/tcp
