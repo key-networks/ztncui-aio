@@ -31,7 +31,8 @@ chmod 640 /var/lib/zerotier-one/authtoken.secret
 
 cd /opt/key-networks/ztncui
 
-echo "MYADDR=$MYADDR" > /opt/key-networks/ztncui/.env
+echo "NODE_ENV=production" > /opt/key-networks/ztncui/.env
+echo "MYADDR=$MYADDR" >> /opt/key-networks/ztncui/.env
 echo "HTTP_PORT=$HTTP_PORT" >> /opt/key-networks/ztncui/.env
 if [ ! -z $HTTP_ALL_INTERFACES ]; then
   echo "HTTP_ALL_INTERFACES=$HTTP_ALL_INTERFACES" >> /opt/key-networks/ztncui/.env

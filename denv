@@ -1,3 +1,4 @@
+NODE_ENV=production
 HTTPS_PORT=3443
 ZTNCUI_PASSWD=password
 MYDOMAIN=ztncui.docker.test

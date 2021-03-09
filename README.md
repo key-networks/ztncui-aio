@@ -32,6 +32,7 @@ For ZTNCUI: https://github.com/key-networks/ztncui
 
 | REQUIRED | Name | Explanation | Default Value |
 |:--------:|:--------:|:--------:|:--------:|
+| YES | NODE_ENV | https://pugjs.org/api/express.html | production |
 |  no  | HTTPS_HOST | Only Listen on HTTPS_HOST:HTTPS_PORT | NO DEFAULT |
 | no | HTTPS_PORT | HTTPS_PORT | 3443 |
 | no | HTTP_PORT | HTTP_PORT | 3000 |
