@@ -7,6 +7,7 @@ import (
 	"io/ioutil"
 	"log"
 	"math/rand"
+	"time"
 	"os"
 
 	"golang.org/x/crypto/argon2"
@@ -25,6 +26,7 @@ type PasswdDef struct {
 const letterBytes = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
 
 func RandStringBytes(n int) string {
+	rand.Seed(time.Now().UnixNano())
 	b := make([]byte, n)
 	for i := range b {
 		b[i] = letterBytes[rand.Intn(len(letterBytes))] // It's not safe for password purpose, but i'm lazy.
@@ -40,7 +42,6 @@ func main() {
 	} 
 	log.Println("Current Password: " + password)
 	
-
 	var ag2_memory uint32 = 4096
 	var ag2_iter uint32 = 3
 	var ag2_para uint8 = 1
